@@ -6,10 +6,15 @@ from django.http import HttpResponse
 from django.template import loader
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User 
 from django.core.urlresolvers import reverse
 
+from .models import NoticePost
+
 def index(request):
-    return render(request, 'muorigin/index.html')
+    latest_post_list = NoticePost.objects.order_by('-pub_date')[:4]
+    template = loader.get_template('muorigin/index.html') 
+    context = {'latest_post_list': latest_post_list}
+    return render(request, 'muorigin/index.html', context)
 
 # Create your views here.

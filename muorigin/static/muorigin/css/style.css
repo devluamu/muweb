@@ -446,6 +446,14 @@ a:hover {
 //  09 - Team Member
 /////////////////////////////////////////////////////////////////////*/
 
+#team {
+    background: url(../img/awesome-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+ 
+}
+
 .team-social {
     margin: 0;
     padding: 8px 0px;
@@ -669,6 +677,24 @@ p.client-name {
     display: table-cell;
     vertical-align: middle;
 }
+.comment-list {
+    list-style: none;
+    padding: 0px 0px 70px 0px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: table;
+}
+.comment-list li {
+    font-size: 22px;
+    padding: 0.5em 0;
+    color: #fff;
+    font-weight: 100;
+}
+.comment-list li span {
+    padding: 0px 0px
+}
+
 .mailbox .container {
     margin-top: 225px;
     margin-bottom: 0px;

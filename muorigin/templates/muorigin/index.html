@@ -158,6 +158,40 @@
 		</section>
 	</section>
 
+	<section id="team" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="col-md-12">
+					<div class="title-box" style="color:#fff;">
+						<h1 class="block-title wow animated rollIn">
+							<span class="bb-top-left" style="border-color: #fff;"></span>
+							<span class="bb-bottom-left" style="border-color: #fff;"></span>
+							공지사항
+							<span class="bb-top-right" style="border-color: #fff;"></span>
+							<span class="bb-bottom-right" style="border-color: #fff;"></span>
+						</h1>
+					</div>
+				</div>
+			</section>
+			<section class="row">
+			{% if latest_post_list %}
+                                {% for post in latest_post_list %}    
+				<section class="col-md-3 col-sm-6">
+					<div class="team-member wow animated fadeIn" data-wow-delay=="0.3s" style="color: #fff;">
+						<h2 class="wow animated fadeInDown" data-wow-delay=="0.7s">{{ post.title }}</h2>
+						<p class="wow animated fadeIn" data-wow-delay=="0.7s">{{ post.text }}</p>
+						<ul class="team-social">
+							<li class="wow animated fadeInLeft linkedin"><a href="#"><i class="ion-social-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</section>
+                                {% endfor %}
+                        {% endif %}
+			</section>
+		</section>
+	</section>
+
+
 	<!-- ****************************** Gallery Section ************************** -->
 
 	<section id="gallery" class="block">
